@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  font-family: 'Leckerli One', cursive;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
+  color: black;
 }
 
 .App-logo {
@@ -17,15 +18,4 @@
 .react-parallax-bgimage {
   width: auto;
   margin-top: -35%;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
