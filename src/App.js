@@ -6,6 +6,8 @@ import VideoContent from "./components/VideoContent";
 import Fade from '@material-ui/core/Fade';
 import RevealFade from 'react-reveal/Fade';
 import BrandIcon from "./components/BrandIcon";
+import AccessHollywoodContent from "./components/BrandContent/AccessHollywoodContent";
+import HomeSweetHomeContent from "./components/BrandContent/HomeSweetHomeContent";
 
 const insideStyles = {
     padding: 20,
@@ -152,7 +154,8 @@ function App() {
                         link={'bachelorette'}/>
                     <BrandIcon
                         img={'https://uc693c497a1793f3764b859ece50.previews.dropboxusercontent.com/p/thumb/ABPYtBi6ejQjWGG_0MFQowQpGby6b1neFTGScLaYGj9hehN2Ty2FXfNHt1FrJ47ujEnBnJADEFNB1rDJnYv1iDVBxO11mGC461X06ctiRWY-SYzwKRXONk5mVehi9h-Um-TrPxV9EgyJD22uKIEkgSQIkTqKHkGGT5DnDWSLQ4Lr_sInCwo6kxit0OPJhufa1uBo13T0EdDIuQU-BOek2Ychwpw5HxM5iCzeL-7YjcXeVWlX45WuHxiUIWQ5ISZljTuOQk3OVRy2sjEKc6hKxXO7JgnWnBn-Xn5KL1ZqDHiHADOvK9-fLaE5oKRgfsFSQiBIUPYPj_dqzxxQPAMNP87uPW7zCg4HESlFjAtfeQi0Og/p.jpeg?size=2048x1536&size_mode=3'}
-                        link={'nbc'}/>
+                        link={'nbc'}
+                    />
                     <BrandIcon
                         img={'https://ucc1e24068e926cd95e3688ab88e.previews.dropboxusercontent.com/p/thumb/ABNX0320lzbF7fe_e4k8O5XFlN8T4M2rdyUJmb0cUT2WUKE-3e8No9zpc5TCmRBiILnKyMHGd_qpRQwB02QTqVq7IQnm998NYipr5bbwmBE1EL2OunxFQoPTmGeXabv7qObvjlQcB4tmF9eBzUHH45dMzauVzT0uqdWnUZcXG2gVURY8Gx-6ieNkGPDWtwWNDMjKHaM7ioF25a_wKc4HzF31-k4tECM23pLYhDHEItFU4hOOGfp8SdIf0BbmPXxFED5d-yhv9JlMP4lfZIpk39ttABeXAWJS9k3W4HdhvJjJslutH8Hyr37Ere499Tn-cnrJSuz-JfHp4Xo0QXVep5yZqK78LYmgvPo0-sJJHmkI7g/p.jpeg?fv_content=true&size_mode=5'}
                         link={'entertainmentWeekly'}/>
@@ -167,7 +170,9 @@ function App() {
                         link={'abc'}/>
                     <BrandIcon
                         img={'https://uc869468d6c79cc0c321033ada62.previews.dropboxusercontent.com/p/thumb/ABOYZAU1D9UoGVbaZSozyEpJOeDvdjAZexNK6O7Nnn-2wY1yIwmG_dAFjiZzykzBlFz3FATxp59IS0S5--Xdy00OPOWp598xbaoFT8PiGPrZTig0IxEVZY-ulOyNvARtHmjwo1SlPF746TNCeTVOhmke7pkC47NIhYf-puzHHNg2q2o8_U0wgPuNlzkFtu_4LjKRFcRxpIr58rCVgPktRJBi4Nzsut04L_uE-3_S7ty-GzKrQaup3mpTuaD__8v9vRwgAfJdxb8gEwF76f6l-v6_xrcT3vM69zybJVksbd9tL_exNF0fykpC0FlTlTs2kCdtTPxt1iJjdFUh3Pz3uzYda8hRMwZZJblyd38BEW4IxQ/p.jpeg?fv_content=true&size_mode=5'}
-                        link={'accessHollywood'}/>
+                        link={'accessHollywood'}
+                        contents={<AccessHollywoodContent />}
+                    />
                     <BrandIcon
                         img={'https://uc5113d45e0a1a912f14c36c6e73.previews.dropboxusercontent.com/p/thumb/ABM2ydBMycSYItc5t9Nd2ZA7jKX2FFV9HzbZQVU2RWBDQOZKBvPTn133qRvfgt7zvvkrJUmMtTJaloBackSwQLTh4SSgNX3BmBJLA8q7F8VvtoE5bp1gv_AJz1gMBtaTLmolQjSNQESoDvD3oiqijRKVA8E_21o-DRNGvBDmP7lKaTRX2axm9TeSDKCwpo1sHEMItnO1AMjxNzqaWpnoRwP1bbRzwIgcHPX9wNeM4M-4D6QjVHQA8y3k385hnXbDRWZGZX6OqnqcPHB_hPpB92IQz3R72bUzzNo-B6aZZVkyGEoNjEGgmFfsEqY_LmJNBatv0d4cm6UOqfVTZ9Qmq4l2T5mJI3zOjx0zYPLQgNMsRA/p.png?fv_content=true&size_mode=5'}
                         link={'accessHollywoodLive'}/>
@@ -200,7 +205,9 @@ function App() {
                         link={'hbo'}/>
                     <BrandIcon
                         img={'https://uc64b804792268d31c4dc07e03f7.previews.dropboxusercontent.com/p/thumb/ABPh89QqI4UqfOpFWe8sy4E4pEwDG75ZKeNVryP3QLvB-tV-Dkj5FFu_hiMhxpmyGJp6eCoAY7llMA28OhYkAQXxydla0ms_1iSDytGx5REoi-5j2xk84Ycm1T_cJasm83I23z-nyM5uLWfK-sXZalsBsGsfwCGGgkPyt4quoF4NlK0zR90L0goUtcO2-fO72p09HXjqp4ageSQkrBhVf17qm2EOjXoYPA-SoxLkdY1cM30k8mgYtBBTLt57TAPH9_FqqXUlYoi3pOfNVdDsf6Pl91Q48JQSVlsTd7Mxw87QvCnRIKVJoYsvsVevH_exuVJidBC0Q_Pfp7PpaPGlwk5cEUeq3MQY7EC36GFLeJyY_A/p.png?fv_content=true&size_mode=5'}
-                        link={'homeSweetHome'}/>
+                        link={'homeSweetHome'}
+                        contents={<HomeSweetHomeContent />}
+                    />
                     <BrandIcon
                         img={'https://uc42e34f25169543bc76399f961d.previews.dropboxusercontent.com/p/thumb/ABNAT4eWvPsekBsXegRTHti_KI8Tc5P8IPlZeKb7X8KHDGyFZ6B5rY4EYCz1Np9F8LIpib5_zHjk75eQ7p4v-MwaSlfcluPN-MtV7n5GPkA4ttXu1WWA1eZwWMAC1OGtwUSi1MxAsfLPtB8Dl90-JHMJqozjmdbLWMOvc9RMg6cSfloeUimFHZr1TzuIAYnT6qdq8b_25IIeQqWGKrqeGEA7sBCoRSYizP1hJDBArzB-Nj9jrRFyQNaV2GhA8zzw9yU_k-AN0zo68KeXtB7_y3XGpbBc6lxT6YQMEU7Rcr9H2lg7Nxwm405T3wwRPmmdrSkEu3dwcFPAa4KzLH1jtrH7p1ORxme94UhmS-p9WmHcng/p.jpeg?fv_content=true&size_mode=5'}
                         link={'nab'}/>
