@@ -7,7 +7,8 @@ export default function BrandIcon({img, link, contents}) {
     const [isModalOpen, setIsModalOpen] = useState(false)
     return (
         <>
-        <div style={{width: 150, height: 150, padding: 10, cursor: 'pointer'}} className={'img-wrapper'} onClick={() => setIsModalOpen(true)}>
+        <div style={{width: 150, height: 150, padding: 10, cursor: contents ? 'pointer' : ''}} className={'img-wrapper'} onClick={() => contents && setIsModalOpen(true)}>
+            {!contents && <div style={{height: "inherit", width: 'inherit', background: 'grey', opacity: .7, position: 'absolute'}}/>}
             <img src={img} alt={link} style={{objectFit: 'cover', width: '100%', height: '100%'}} className={'hover-zoom'}/>
         </div>
 
