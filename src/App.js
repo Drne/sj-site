@@ -2,12 +2,13 @@ import './App.css';
 import {Parallax} from 'react-parallax';
 import {AppBar, Hidden, Tab, Tabs, Typography} from "@material-ui/core";
 import React, {useEffect} from 'react';
-import VideoContent from "./components/VideoContent";
 import Fade from '@material-ui/core/Fade';
 import RevealFade from 'react-reveal/Fade';
 import BrandIcon from "./components/BrandIcon";
-import AccessHollywoodContent from "./components/BrandContent/AccessHollywoodContent";
-import HomeSweetHomeContent from "./components/BrandContent/HomeSweetHomeContent";
+import HomeSweetHome from "./components/BrandContent/HomeSweetHome";
+import AccessHollywood from "./components/BrandContent/AccessHollywood";
+import Showtime from "./components/BrandContent/Showtime";
+import HBO from "./components/BrandContent/HBO";
 
 const insideStyles = {
     padding: 20,
@@ -142,7 +143,9 @@ function App() {
                     <RevealFade bottom>
                     <BrandIcon
                         img={'https://ucce8949a4874fb6e637968fb5cc.previews.dropboxusercontent.com/p/thumb/ABO8dN-Y51AGhS_sWKYNdpdLgwZo6n4Yd2ynhYTrHvFVsbaNlimo8XvwUVjYMrxGf2ZNltakxc8Okw8gf-3AsyNd6rWLxi4XSiMg5bOXg5aivjYuEk4c8IPzBJZ-pKNIbVMu38LBpq7UG3xL73dTQpcfHXgm2VPfzxURfaiNGNAqu9MrN8tvx2424s-CIKPW_FNuzX1Cc8zi9vejTR18YTZX2Tp10NE7wUe2tS3T0zBbYa8fUa6ZVBbgIM2sVWEIs9xNM_9lCStge0g8PMPxolXrY4xEmO9_gj-VBTudkwM8cFQmJh9lQ696dykEf1aHjlZmcoOJUJB-PYSPeLh7RalBDUI6dstBcRjq2U6PWFDKzg/p.jpeg?fv_content=true&size_mode=5'}
-                        link={'showtime'}/>
+                        link={'showtime'}
+                        contents={<Showtime />}
+                    />
                     <BrandIcon
                         img={'https://ucc3dbb492e8ceeacbc242016120.previews.dropboxusercontent.com/p/thumb/ABOyBVZDQNPEdRGvAFJ70sbijAj0eb8e97KWgr9-QbJ99W46mkzxYyyrQcgL_3P3EHK3yhtDhUhoKRh6ngL2WUOGxuFMSJ-tXYrFiIkaZXCiYkzRa7akcN3Zy1-mbYws_YzfG9Jl_4FdcZs5XZ6AZHCPN3kIFLL3OYts6SPMMxOGofQmhpLME0Cpd6WhMkbi3EUUq2EROpKKVqOBLgLo7TBd6i7SeuTz7trQSPfKD-kdU5HncHoR9NYmIfhhR4ftE64V2DFCYGZ7uxxtbNmorsgZDu9Rf6UXeR3dt4Cq-91-yjA_kr_IEU5lBpsgdkxAOumjYS-NwWowNHcgqiJwxXxcfuP2jxsJ7DOEsPB7V9S9NQUEcjltao08m3uRgJRolfcShqoSHVY6U74haglP4tbH/p.jpeg?fv_content=true&size_mode=5'}
                         link={'goldenGlobes'}/>
@@ -171,7 +174,7 @@ function App() {
                     <BrandIcon
                         img={'https://uc869468d6c79cc0c321033ada62.previews.dropboxusercontent.com/p/thumb/ABOYZAU1D9UoGVbaZSozyEpJOeDvdjAZexNK6O7Nnn-2wY1yIwmG_dAFjiZzykzBlFz3FATxp59IS0S5--Xdy00OPOWp598xbaoFT8PiGPrZTig0IxEVZY-ulOyNvARtHmjwo1SlPF746TNCeTVOhmke7pkC47NIhYf-puzHHNg2q2o8_U0wgPuNlzkFtu_4LjKRFcRxpIr58rCVgPktRJBi4Nzsut04L_uE-3_S7ty-GzKrQaup3mpTuaD__8v9vRwgAfJdxb8gEwF76f6l-v6_xrcT3vM69zybJVksbd9tL_exNF0fykpC0FlTlTs2kCdtTPxt1iJjdFUh3Pz3uzYda8hRMwZZJblyd38BEW4IxQ/p.jpeg?fv_content=true&size_mode=5'}
                         link={'accessHollywood'}
-                        contents={<AccessHollywoodContent />}
+                        contents={<AccessHollywood />}
                     />
                     <BrandIcon
                         img={'https://uc5113d45e0a1a912f14c36c6e73.previews.dropboxusercontent.com/p/thumb/ABM2ydBMycSYItc5t9Nd2ZA7jKX2FFV9HzbZQVU2RWBDQOZKBvPTn133qRvfgt7zvvkrJUmMtTJaloBackSwQLTh4SSgNX3BmBJLA8q7F8VvtoE5bp1gv_AJz1gMBtaTLmolQjSNQESoDvD3oiqijRKVA8E_21o-DRNGvBDmP7lKaTRX2axm9TeSDKCwpo1sHEMItnO1AMjxNzqaWpnoRwP1bbRzwIgcHPX9wNeM4M-4D6QjVHQA8y3k385hnXbDRWZGZX6OqnqcPHB_hPpB92IQz3R72bUzzNo-B6aZZVkyGEoNjEGgmFfsEqY_LmJNBatv0d4cm6UOqfVTZ9Qmq4l2T5mJI3zOjx0zYPLQgNMsRA/p.png?fv_content=true&size_mode=5'}
@@ -202,11 +205,13 @@ function App() {
                         link={'grammys'}/>
                     <BrandIcon
                         img={'https://uc38d5470f5d366257ccf6cc3717.previews.dropboxusercontent.com/p/thumb/ABOSaYPkkj1Juj4hoLzMLb4NTCOhcnc0qYsHYut6tVP_-zRNIR9Xgjexyve33pDfrXKzFpZXM7gRFpMW2gW3n3voqWDibjYwWGhnEF4bUifTyaTYri0zrATQT50-FOnm9pLf9fwNuA36dCnuRkd7P1M5g7cERkGbScUtS5KtmmYxrfmDYY1Z5tJKjAi-NdjYryfhW3fcAdPuIx_ZN_q25AjuLt5gqRzqTn90dAQIarhjk8MU2cgXDQ585hsVkv5u00rkWRRzcp2m5BaF5FNthFuoOKSj09ZJfVaLSvIY2ajtm92MbK7ccWxAaxy77weaggwfRc6N7rMwfABdd1D-pGziRgVlRpX5P_3Gi6TlmlIsrg/p.jpeg?fv_content=true&size_mode=5'}
-                        link={'hbo'}/>
+                        link={'hbo'}
+                        contents={<HBO />}
+                    />
                     <BrandIcon
                         img={'https://uc64b804792268d31c4dc07e03f7.previews.dropboxusercontent.com/p/thumb/ABPh89QqI4UqfOpFWe8sy4E4pEwDG75ZKeNVryP3QLvB-tV-Dkj5FFu_hiMhxpmyGJp6eCoAY7llMA28OhYkAQXxydla0ms_1iSDytGx5REoi-5j2xk84Ycm1T_cJasm83I23z-nyM5uLWfK-sXZalsBsGsfwCGGgkPyt4quoF4NlK0zR90L0goUtcO2-fO72p09HXjqp4ageSQkrBhVf17qm2EOjXoYPA-SoxLkdY1cM30k8mgYtBBTLt57TAPH9_FqqXUlYoi3pOfNVdDsf6Pl91Q48JQSVlsTd7Mxw87QvCnRIKVJoYsvsVevH_exuVJidBC0Q_Pfp7PpaPGlwk5cEUeq3MQY7EC36GFLeJyY_A/p.png?fv_content=true&size_mode=5'}
                         link={'homeSweetHome'}
-                        contents={<HomeSweetHomeContent />}
+                        contents={<HomeSweetHome />}
                     />
                     <BrandIcon
                         img={'https://uc42e34f25169543bc76399f961d.previews.dropboxusercontent.com/p/thumb/ABNAT4eWvPsekBsXegRTHti_KI8Tc5P8IPlZeKb7X8KHDGyFZ6B5rY4EYCz1Np9F8LIpib5_zHjk75eQ7p4v-MwaSlfcluPN-MtV7n5GPkA4ttXu1WWA1eZwWMAC1OGtwUSi1MxAsfLPtB8Dl90-JHMJqozjmdbLWMOvc9RMg6cSfloeUimFHZr1TzuIAYnT6qdq8b_25IIeQqWGKrqeGEA7sBCoRSYizP1hJDBArzB-Nj9jrRFyQNaV2GhA8zzw9yU_k-AN0zo68KeXtB7_y3XGpbBc6lxT6YQMEU7Rcr9H2lg7Nxwm405T3wwRPmmdrSkEu3dwcFPAa4KzLH1jtrH7p1ORxme94UhmS-p9WmHcng/p.jpeg?fv_content=true&size_mode=5'}
